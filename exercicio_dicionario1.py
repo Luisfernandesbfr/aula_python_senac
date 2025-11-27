@@ -1,82 +1,37 @@
-<<<<<<< HEAD
-''' Você deve criar um programa que simule o 
-cadastro e a consulta de informações de um 
+''' Você deve criar um programa que simule o
+cadastro e a consulta de informações de um
 produto em uma loja'''
 
-#Criando um dicionário com informações do produto
-produto =  {
+# Criando um dicionário com informações do produto
+produto = {
     'Nome': 'Mousse',
     'Preço': 49.90,
-    'Estoque': 25,    
+    'Estoque': 25,
 }
 
-#Exibindo as informações do produto
+# Exibindo as informações do produto
 for chave, valor in produto.items():
- print(f"{chave}: {valor}")
+    print(f"{chave}: {valor}")
 
-#Consultando informações específicas do produto
+# Consultando informações específicas do produto
 chave_consulta = input("Digite o nome de uma chave para consultar (Ex: Nome, Preço, Estoque): ").strip()
 
-#Formatando a chave para corresponder ao formato do dicionário
+# Formatando a chave para corresponder ao formato do dicionário
 chave_formatada = chave_consulta.capitalize()
 
-#Obtendo o valor correspondente à chave informada
+# Obtendo o valor correspondente à chave informada
 valor_encontrado = produto.get(chave_formatada, "Essa informação não está disponível.")
 
-#Exibindo o resultado da consulta
+# Exibindo o resultado da consulta
 print(f"{chave_formatada}: {valor_encontrado}")
 
-#Adicionando uma nova informação ao dicionário
+# Adicionando uma nova informação ao dicionário
 produto['Categoria'] = 'informatica'
 
-
-produto['Preço'] =  59.90
+produto['Preço'] = 59.90
 
 del produto['Estoque']
 
 print("\nInformações atualizadas do produto:")
 for chave, valor in produto.items():
     print(f"{chave}: {valor}")
-
-=======
-''' Você deve criar um programa que simule o 
-cadastro e a consulta de informações de um 
-produto em uma loja'''
-
-#Criando um dicionário com informações do produto
-produto =  {
-    'Nome': 'Mousse',
-    'Preço': 49.90,
-    'Estoque': 25,    
-}
-
-#Exibindo as informações do produto
-for chave, valor in produto.items():
- print(f"{chave}: {valor}")
-
-#Consultando informações específicas do produto
-chave_consulta = input("Digite o nome de uma chave para consultar (Ex: Nome, Preço, Estoque): ").strip()
-
-#Formatando a chave para corresponder ao formato do dicionário
-chave_formatada = chave_consulta.capitalize()
-
-#Obtendo o valor correspondente à chave informada
-valor_encontrado = produto.get(chave_formatada, "Essa informação não está disponível.")
-
-#Exibindo o resultado da consulta
-print(f"{chave_formatada}: {valor_encontrado}")
-
-#Adicionando uma nova informação ao dicionário
-produto['Categoria'] = 'informatica'
-
-
-produto['Preço'] =  59.90
-
-del produto['Estoque']
-
-print("\nInformações atualizadas do produto:")
-for chave, valor in produto.items():
-    print(f"{chave}: {valor}")
-
->>>>>>> 3786d477a219c6a94791467270ccaab7c665468a
-    
